@@ -14,12 +14,14 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     font-family: var(--font-serif);
     font-size: 16px;
-    background-color: #333; /* Dark outer background */
+    background-color: #333;
+    /* Dark outer background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +96,7 @@ html, body {
     max-height: 600px;
     padding: 20px;
     display: flex;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
     overflow: hidden;
 }
@@ -141,7 +143,8 @@ html, body {
     transition: color 0.2s;
 }
 
-.nav-menu a:hover, .nav-menu a.active {
+.nav-menu a:hover,
+.nav-menu a.active {
     color: var(--primary-pink);
     text-decoration: underline;
 }
@@ -172,24 +175,30 @@ html, body {
     padding: 25px;
     overflow-y: auto;
     position: relative;
+    /* Removed direct background image to use pseudo-element for opacity control */
+}
+
+.content-area::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 400px;
     background-image: url('img/rosalia.jpg');
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 60%;
-}
-
-/* Scrollbar styling */
-.content-area::-webkit-scrollbar {
-    width: 8px;
-}
-.content-area::-webkit-scrollbar-track {
-    background: var(--bg-content);
-}
-.content-area::-webkit-scrollbar-thumb {
-    background: var(--bg-frame);
+    background-size: contain;
+    opacity: 0.15;
+    /* Reduced opacity significantly for readability */
+    pointer-events: none;
+    z-index: 0;
 }
 
 .content-section {
+    position: relative;
+    z-index: 1;
+    /* Ensure text is above background image */
     display: none;
     animation: fadeIn 0.4s ease-out;
 }
@@ -199,8 +208,15 @@ html, body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h2 {
@@ -209,7 +225,8 @@ h2 {
     text-align: center;
 }
 
-p, li {
+p,
+li {
     line-height: 1.6;
     margin-bottom: 10px;
     color: #333;
@@ -234,6 +251,7 @@ em {
         max-height: none;
         width: 95vw;
     }
+
     .sidebar {
         width: 100%;
         padding-right: 0;
@@ -241,6 +259,7 @@ em {
         background-position: top right;
         background-size: 100px;
     }
+
     .content-area {
         width: 100%;
         height: 50vh;
