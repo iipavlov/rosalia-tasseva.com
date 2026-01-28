@@ -260,7 +260,19 @@
 
           // Switch active section
           document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-          document.getElementById(sectionId).classList.add('active');
+          const targetSection = document.getElementById(sectionId);
+          targetSection.classList.add('active');
+
+          // Toggle background image visibility based on section content
+          const contentArea = document.querySelector('.content-area');
+          if (['recordings', 'awards'].includes(sectionId)) {
+            contentArea.classList.add('no-image');
+          } else {
+            contentArea.classList.add('no-image'); // User requested to hide it in Recordings, let's just keep it hidden for text-heavy sections
+            if (sectionId === 'welcome' || sectionId === 'contact') {
+              contentArea.classList.remove('no-image');
+            }
+          }
 
           // Update nav active state
           document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));

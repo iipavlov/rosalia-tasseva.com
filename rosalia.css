@@ -38,12 +38,15 @@ body {
     color: var(--text-white);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Start from top to prevent hidden content */
     align-items: center;
     z-index: 1000;
     transition: opacity 0.8s ease-in-out;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    overflow-y: auto;
+    /* Allow scrolling if screen is short */
 }
 
 #intro.hidden {
@@ -65,10 +68,11 @@ body {
 
 .intro-image {
     width: 100%;
-    max-width: 640px;
+    max-width: 400px;
+    /* Smaller image to ensure button visibility */
     height: auto;
     border: 1px solid #444;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .continue-btn {
@@ -201,6 +205,11 @@ body {
     /* Ensure text is above background image */
     display: none;
     animation: fadeIn 0.4s ease-out;
+}
+
+/* Hide portrait image in text-heavy sections to prevent overlap */
+.content-area.no-image::before {
+    display: none;
 }
 
 .content-section.active {
