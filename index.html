@@ -1,30 +1,284 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"  style="height:100%; width:100%;"> 
-<head> 
-<META name="verify-v1" content="lcWULXrO8jYny2whEhPjyiLUBkJ+r2vwCVTwtzPhcQw=" /> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-<link rel="stylesheet" type="text/css" href="rosalia.css" /> 
-<title>Rosalia Tasseva - pianist</title> 
-</head> 
- 
-<body  style="height:100%; width:100%;"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="height:100%; width:100%;"> 
-  <tr style="height:100%;"> 
-    <td align='center' valign='middle'> 
-	<div id='frame' style="height: 640px; width: 640px; text-align: center;background-color: black; color: white;"> 
-		<h1>In memoriam of my mother</h1>
-    <h1>В памет на майка ми</h1>
-    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="640" height="480" id="tech" align="middle">
-		<param name="allowScriptAccess" value="sameDomain" />
-		<param name="movie" value="myalbum2.swf" />
-		<param name="quality" value="high" />
-		<embed src="myalbum2.swf" quality="high" width="640" height="480" name="tech" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-	</object>
-    <br><br>
-    <center><a href="index.htm">Continue to the site</a>&nbsp;&nbsp;<a href="index.htm">Продължете към сайта</a>
-  </div> 
-</td> 
-  </tr> 
-</table> 
- 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="verify-v1" content="lcWULXrO8jYny2whEhPjyiLUBkJ+r2vwCVTwtzPhcQw=" />
+  <meta name="description"
+    content="Official website of Rosalia Tasseva - concert pianist and educator. Awards, recordings and performance schedule.">
+  <title>Rosalia Tasseva - pianist</title>
+  <link rel="stylesheet" href="rosalia.css">
+</head>
+
+<body>
+
+  <!-- Intro Overlay (Replaces Flash) -->
+  <div id="intro">
+    <div class="intro-content">
+      <h1 class="lang en">In memoriam of my mother</h1>
+      <h1 class="lang bg" style="display:none;">В памет на майка ми</h1>
+      <img src="img/rosalia.jpg" alt="Rosalia Tasseva" class="intro-image">
+      <div style="margin-top: 20px;">
+        <button class="continue-btn nav-trigger" data-section="welcome">
+          <span class="lang en">Continue to the site</span>
+          <span class="lang bg" style="display:none;">Продължете към сайта</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-frame">
+    <aside class="sidebar">
+      <div class="identity">
+        <h1 class="lang en">Rosalia<br><span class="name-indent">Tasseva</span></h1>
+        <h1 class="lang bg" style="display:none;">Розалия<br><span class="name-indent">Тасева</span></h1>
+        <div class="title">
+          <span class="lang en">pianist</span>
+          <span class="lang bg" style="display:none;">пианистка</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#" class="nav-trigger" data-section="awards">
+          <span class="lang en">Awards</span>
+          <span class="lang bg" style="display:none;">Награди</span>
+        </a>
+        <a href="#" class="nav-trigger" data-section="concerts">
+          <span class="lang en">Concerts</span>
+          <span class="lang bg" style="display:none;">Концерти</span>
+        </a>
+        <a href="#" class="nav-trigger" data-section="recordings">
+          <span class="lang en">Recordings</span>
+          <span class="lang bg" style="display:none;">Записи</span>
+        </a>
+        <a href="cv-en.pdf" target="_blank" class="lang en">CV</a>
+        <a href="cv-bg.pdf" target="_blank" class="lang bg" style="display:none;">Биография</a>
+
+        <a href="#" class="nav-trigger" data-section="contact">
+          <span class="lang en">Contact me</span>
+          <span class="lang bg" style="display:none;">За контакти</span>
+        </a>
+
+        <div style="margin-top: 20px;">
+          <a href="#" class="nav-trigger" data-section="welcome">
+            <span class="lang en">Home</span>
+            <span class="lang bg" style="display:none;">Начало</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="lang-switch">
+        <button class="lang-btn" onclick="setLanguage('en')">English</button> |
+        <button class="lang-btn" onclick="setLanguage('bg')">Български</button>
+      </div>
+    </aside>
+
+    <section class="content-area">
+
+      <!-- Welcome Section -->
+      <article id="welcome" class="content-section active">
+        <div class="lang en">
+          <h2>Welcome</h2>
+          <p>Welcome to my professional portfolio.</p>
+        </div>
+        <div class="lang bg" style="display:none;">
+          <h2>Добре дошли</h2>
+          <p>Добре дошли в моето професионално портфолио.</p>
+        </div>
+      </article>
+
+      <!-- Awards Section -->
+      <article id="awards" class="content-section">
+        <div class="lang en">
+          <h2>Awards</h2>
+          <p><em>1974</em> - Diploma at The competition "Young musician" – Bulgaria</p>
+          <p><em>1978</em> - Honorary diploma at The International Competition "Usti nad Labem"-Czech Republic</p>
+          <p><em>1984</em> - Diploma at The Seventh Bulgarian Competition</p>
+          <p><em>1987</em> - First prize at The National Competition “The Golden Diana"-with piano-quartet</p>
+          <p><em>1998</em> - Nomination "The musician of the 1998" of The National Bulgarian Radio</p>
+          <p><em>2010</em> - Second prize as composer, author of the lyrics and music arranger for the creating of new
+            children song at The First national music festival “The pink lion” in Varna</p>
+          <p><em>2013</em> - First prize on The International Music Festival “Sea and memories” in Varna, Bulgaria for
+            new author pop song “Sea element” – music and lyrics Rosalia Tasseva, arranger Pavel Vassev, singer Julietta
+            Ivanova from “The Voice of Bulgaria”</p>
+        </div>
+        <div class="lang bg" style="display:none;">
+          <h2>Награди</h2>
+          <p><em>1974</em> - Диплом на конкурса „Млад музикант“ – България</p>
+          <p><em>1978</em> - Почетен диплом на международния конкурс „Usti nad Labem“ - Чехия</p>
+          <p><em>1984</em> - Диплом на Седмото общобългарско състезание</p>
+          <p><em>1987</em> - Първа награда на Националния конкурс „Златната Диана“ - с клавирен квартет</p>
+          <p><em>1998</em> - Номинация „Музикант на годината 1998“ на Българското национално радио</p>
+          <p><em>2010</em> - Втора награда като композитор, автор на текст и аранжор на нова детска песен на Първия
+            национален музикален фестивал „Розовият лъв“ във Варна</p>
+          <p><em>2013</em> - Първа награда на международния музикален фестивал „Море и спомени“ във Варна за авторска
+            поп песен „Морска стихия“ – музика и текст Розалия Тасева, аранжимент Павел Васев, изпълнител Жулиета
+            Иванова</p>
+        </div>
+      </article>
+
+      <!-- Concerts Section -->
+      <article id="concerts" class="content-section">
+        <div class="lang en">
+          <h2>Concerts</h2>
+          <p>Successful recitals and concerts as soloist of numerous orchestras in:</p>
+          <ul>
+            <li>Bulgaria</li>
+            <li>Italy</li>
+            <li>Switzerland</li>
+            <li>Belgium</li>
+            <li>Germany</li>
+            <li>Czech Republic</li>
+          </ul>
+        </div>
+        <div class="lang bg" style="display:none;">
+          <h2>Концерти</h2>
+          <p>Успешни рецитали и концерти като солист на множество оркестри в:</p>
+          <ul>
+            <li>България</li>
+            <li>Италия</li>
+            <li>Швейцария</li>
+            <li>Белгия</li>
+            <li>Германия</li>
+            <li>Чехия</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Recordings Section -->
+      <article id="recordings" class="content-section">
+        <div class="lang en">
+          <h2>Recordings</h2>
+          <ul>
+            <li>For the radio and TV companies in Bulgaria and Germany</li>
+            <li>July 2003 - CD for the GEGA-NEW company: R. Schumann, M. Ravel</li>
+          </ul>
+          <p><strong>Robert Schumann, Davidsbündlertänze, op. 6</strong></p>
+          <p>Klavierzyklus aus 18 Charakterstücke</p>
+          <ol style="font-size: 0.9rem; column-count: 2;">
+            <li>Lebhaft</li>
+            <li>Innig</li>
+            <li>Mit Humor</li>
+            <li>Ungeduldig</li>
+            <li>Einfach</li>
+            <li>Zehr rash</li>
+            <li>Nicht schnell</li>
+            <li>Frish</li>
+            <li>Lebhaft</li>
+            <li>Balladenmässig. Sehr rash</li>
+            <li>Einfach</li>
+            <li><a href="CD/Cut_12 - Rosalia Tasseva - Davidsbundlertanze, op. 6.mp3">Mit Humor (Cut 12)</a></li>
+            <li><a href="CD/Cut_13 - Rosalia Tasseva - Davidsbundlertanze, op. 6.mp3">Wild und lustig (Cut 13)</a></li>
+            <li><a href="CD/Cut_14 - Rosalia Tasseva - Davidsbundlertanze, op. 6.mp3">Zart und Singend (Cut 14)</a></li>
+            <li>Frisch</li>
+            <li>Mit gutem Humor</li>
+            <li>Wie aus der Ferne</li>
+            <li>Nicht schnell</li>
+          </ol>
+          <p style="margin-top: 15px;"><strong>Maurice Ravel, Three pieces from the cycle "Miroirs"</strong></p>
+          <ol style="font-size: 0.9rem;">
+            <li><a href="CD/02 - Rosalia Tasseva - Miroirs - Noctuelles.mp3">Noctuelles (Cut 02)</a></li>
+            <li><a href="CD/03 - Rosalia Tasseva - Miroirs - Oiseaux tristes.mp3">Oiseaux tristes (Cut 03)</a></li>
+            <li>La Vallée des cloches</li>
+          </ol>
+        </div>
+        <div class="lang bg" style="display:none;">
+          <h2>Записи</h2>
+          <ul>
+            <li>За радио и телевизионни компании в България и Германия</li>
+            <li>Юли 2003 - CD за компанията GEGA-NEW: Р. Шуман, М. Равел</li>
+          </ul>
+          <p><strong>Роберт Шуман, Давидсбюндлертанци, оп. 6</strong></p>
+          <p>Клавирен цикъл от 18 характерни пиеси</p>
+          <ol style="font-size: 0.9rem; column-count: 2;">
+            <li>Lebhaft</li>
+            <li>Innig</li>
+            <li>Mit Humor</li>
+            <li>Ungeduldig</li>
+            <li>Einfach</li>
+            <li>Zehr rash</li>
+            <li>Nicht schnell</li>
+            <li>Frish</li>
+            <li>Lebhaft</li>
+            <li>Balladenmässig. Sehr rash</li>
+            <li>Einfach</li>
+            <li><a href="CD/Cut_12 - Rosalia Tasseva - Davidsbundlertanze, op. 6.mp3">Mit Humor (Cut 12)</a></li>
+            <li><a href="CD/Cut_13 - Rosalia Tasseva - Davidsbundlertanze, op. 6.mp3">Wild und lustig (Cut 13)</a></li>
+            <li><a href="CD/Cut_14 - Rosalia Tasseva - Davidsbundlertanze, op. 6.mp3">Zart und Singend (Cut 14)</a></li>
+            <li>Frisch</li>
+            <li>Mit gutem Humor</li>
+            <li>Wie aus der Ferne</li>
+            <li>Nicht schnell</li>
+          </ol>
+          <p style="margin-top: 15px;"><strong>Морис Равел, Три пиеси от цикъла „Огледала“</strong></p>
+          <ol style="font-size: 0.9rem;">
+            <li><a href="CD/02 - Rosalia Tasseva - Miroirs - Noctuelles.mp3">Noctuelles (Cut 02)</a></li>
+            <li><a href="CD/03 - Rosalia Tasseva - Miroirs - Oiseaux tristes.mp3">Oiseaux tristes (Cut 03)</a></li>
+            <li>La Vallée des cloches</li>
+          </ol>
+        </div>
+      </article>
+
+      <!-- Contact Section -->
+      <article id="contact" class="content-section">
+        <div class="lang en">
+          <h2>Contact Information</h2>
+          <p><strong>Phone:</strong> +359 2 9288434</p>
+          <p><strong>Mobile:</strong> +359 889 767 142</p>
+          <p><strong>Email:</strong> <span class="email-link">rostass@abv.bg</span></p>
+        </div>
+        <div class="lang bg" style="display:none;">
+          <h2>За контакти</h2>
+          <p><strong>Телефон:</strong> +359 2 9288434</p>
+          <p><strong>Мобилен:</strong> +359 889 767 142</p>
+          <p><strong>E-mail:</strong> <span class="email-link">rostass@abv.bg</span></p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script>
+    // Language Toggle Logic
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? '' : 'none';
+      });
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    // Section Navigation Logic
+    document.querySelectorAll('.nav-trigger').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        const sectionId = trigger.getAttribute('data-section');
+        if (sectionId) {
+          e.preventDefault();
+
+          // Hide intro if it's visible
+          document.getElementById('intro').classList.add('hidden');
+
+          // Switch active section
+          document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+          document.getElementById(sectionId).classList.add('active');
+
+          // Update nav active state
+          document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+          if (trigger.tagName === 'A') trigger.classList.add('active');
+        }
+      });
+    });
+
+    // Email obfuscation
+    document.querySelectorAll('.email-link').forEach(el => {
+      const email = el.textContent;
+      el.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    });
+
+    // Initialize Language Preferences
+    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    setLanguage(savedLang);
+  </script>
+</body>
+
+</html>

@@ -1,80 +1,249 @@
-/* CSS Document */
-html {
-	width:100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;	
-}
-#conash3D0 {display: none!important;}
-body, div {
-	margin: 0;
-	padding: 0;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 10pt;
+:root {
+    --primary-purple: #9664ff;
+    --primary-pink: #f8389d;
+    --bg-frame: #deabff;
+    --bg-content: #fcf;
+    --bg-black: #000;
+    --text-white: #fff;
+    --font-serif: "Georgia", "Times New Roman", serif;
 }
 
-div#frame {
-	background-color:#deabff;
-	height: 480px;
-	width: 720px;
-	padding: 10px;
-	text-align:left;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-div#left {
-	width:300px;
-	height: 480px;
-	float: left;
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-serif);
+    font-size: 16px;
+    background-color: #333; /* Dark outer background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-div#right {
-	width: 420px;
-	height: 480px;
-	float: left;
-	overflow: auto;
-	background: url(./img/rosalia.jpg) bottom right no-repeat #fcf;
+/* Intro Overlay */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.8s ease-in-out;
+    text-align: center;
+    padding: 20px;
 }
 
-.royal {padding-top: 60px;}
-#left h1 {
-	color:#f8389d; 
-	font-style:italic;
-	margin: 0 5px 5px 5px;
-	text-align: center;
+#intro.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#intro h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.intro-content {
+    max-width: 640px;
+    width: 100%;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border: 1px solid #444;
+    margin-bottom: 20px;
+}
+
+.continue-btn {
+    border: 1px solid var(--text-white);
+    padding: 10px 20px;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: transparent;
+    display: inline-block;
+}
+
+.continue-btn:hover {
+    background: var(--text-white);
+    color: var(--bg-black);
+}
+
+/* Main Container */
+.main-frame {
+    background-color: var(--bg-frame);
+    width: 90vw;
+    max-width: 800px;
+    height: 90vh;
+    max-height: 600px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left Section: Nav & Identity */
+.sidebar {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+    background: url('img/royal.gif') bottom center no-repeat;
+    background-size: 80%;
+}
+
+.identity h1 {
+    color: var(--primary-pink);
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.identity .name-indent {
+    padding-left: 20px;
+}
+
+.identity .title {
+    color: var(--primary-purple);
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.nav-menu {
+    margin-top: 2rem;
+}
+
+.nav-menu a {
+    display: block;
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--primary-pink);
+    text-decoration: underline;
+}
+
+.lang-switch {
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+.lang-btn {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.lang-btn:hover {
+    text-decoration: underline;
+}
+
+/* Right Section: Content */
+.content-area {
+    width: 65%;
+    background-color: var(--bg-content);
+    padding: 25px;
+    overflow-y: auto;
+    position: relative;
+    background-image: url('img/rosalia.jpg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+/* Scrollbar styling */
+.content-area::-webkit-scrollbar {
+    width: 8px;
+}
+.content-area::-webkit-scrollbar-track {
+    background: var(--bg-content);
+}
+.content-area::-webkit-scrollbar-thumb {
+    background: var(--bg-frame);
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h2 {
-	text-align: center;
-	color: #9664ff;
+    color: var(--primary-purple);
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.menu a {
-	display: block;
-	color: #9664ff;
-	font-size: 12pt;
-	text-decoration: none;
-	font-weight: bold;
-	padding: 5px 0;
+p, li {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.menu a:hover {
-	color: #f8389d; 
-	text-decoration: underline;
+ul {
+    padding-left: 20px;
 }
 
-body.content {
-background-color: #fcf;
-padding: 5px;
+em {
+    font-weight: bold;
+    color: var(--primary-purple);
+    font-style: normal;
+    margin-right: 5px;
 }
 
-div#left div.name {
-	font-size: 54pt; 
-	color:#f8389d; 
-	font-style:italic; 
-	position: absolute; 
-	padding-left: 20px; 
-	padding-top:70px; 
-	background:url(img/royal.gif) bottom right no-repeat; 
-	height: 420px;
-	width: 385px;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-frame {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        width: 95vw;
+    }
+    .sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+        background-position: top right;
+        background-size: 100px;
+    }
+    .content-area {
+        width: 100%;
+        height: 50vh;
+        background-size: 150px;
+    }
 }
