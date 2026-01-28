@@ -1,0 +1,10 @@
+.DS_Store
+cgi-bin/
+stats/
+php_uploads/
+.DS_Store
+cgi-bin/
+stats/
+php_uploads/
+# Keeping content files in the repo for now
+
