@@ -112,8 +112,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding-right: 20px;
-    background: url('img/royal.gif') bottom center no-repeat;
-    background-size: 80%;
+    /* Removed royal.gif background to prevent overlap with language switcher */
+    background-color: var(--bg-frame);
 }
 
 .identity h1 {
